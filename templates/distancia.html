@@ -1,13 +1,16 @@
+<!DOCTYPE html>
 {% extends "layout.html" %}
+
 {% block content %}
+{% import "_macros.html" as macro %}
 
-    <h1>HOLA MUNDO EN DISTANCIA!!!!!!!!!!!!!!!</h1>
+    <h1>¡¡¡ DISTANCIA !!!</h1>
 
-    <h2>{{titulo}}</h2>
-    <ul>
-        {% for opera in listado %}
-            <li>{{opera}}</li>
-        {% endfor %}
-    </ul>
+    <form class="form-control" action="" method="post">
+        {{ macro.campo1('x1','Ingrese X1','number')}}
+        {{ macro.campo1('y1','Ingrese y1','email')}}
+        {{ macro.campo1('x2','Ingrese X2','password')}}
+        {{ macro.campo1('y2','Ingrese y2')}}
+    </form>
 
     {% endblock %}

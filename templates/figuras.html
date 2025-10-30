@@ -1,0 +1,37 @@
+
+
+<!DOCTYPE html>
+{% extends "layout.html" %}
+
+{% block content %}
+{% import "_macros.html" as macro %}
+
+<div class="container">
+    <div class="row justify-content-center">
+
+        <h1 class="col-12">¡¡¡ Figuras !!!</h1>
+
+        <form action="" method="post" class="form-control">
+            <div class="col-2">
+                {{ macro.campo2('tipofigura','triangulo')}}
+                {{ macro.campo2('tipofigura','rectangulo')}}
+                {{ macro.campo2('tipofigura','circulo')}}
+                {{ macro.campo2('tipofigura','pentagono')}}
+            </div>
+            <div class="col-10">
+                    {{ macro.campoFiguras(form.base)}}
+                    {{ macro.campoFiguras(form.altura)}}
+                    {{ macro.campoFiguras(form.radio)}}
+                    {{ macro.campoFiguras(form.apotema)}}
+                    {{ macro.campoFiguras(form.lado)}}
+
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+        <h2>Figura Seleccionada: {{tipofigura}}</h2>
+        <h2>Resultado: {{res}}</h2>
+    </div>
+
+</div>
+
+    {% endblock %}
